@@ -10,10 +10,11 @@ pipeline{
 				}
 			}
 		  }
-		stage ('Testing Stage')
+		stage ('Testing Stage') {
 		  steps {
 		withMaven(maven : 'Maven350') {
 		  sh 'mvn test'		 }
+		}
 		}
 	}
 	}
